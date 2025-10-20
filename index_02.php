@@ -138,6 +138,27 @@ $x = 5;
 $x = (string) $x;
 var_dump($x);
 
+//Strings in PHP
+echo "<br>";
+echo "Hello";
+print "Hello";
+
+$x = "John";
+echo "Hello $x";
+
+$x = "John";
+echo 'Hello $x';
+
+// returns the length of a string
+echo '<br>';
+echo strlen("Hello world!");
+
+// number of words in a string
+echo str_word_count("Hello world!");
+
+echo "<br>";
+echo strpos("Hello world!", "world");
+
 ?>
 </body>
 </html>
