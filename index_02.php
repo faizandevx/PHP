@@ -110,6 +110,34 @@ echo "<br>";
 $cars = array("Volvo","BMW","Toyota");
 var_dump($cars);
 
+//Objects
+class Car {
+  public $color;
+  public $model;
+  public function __construct($color, $model) {
+    $this->color = $color;
+    $this->model = $model;
+  }
+  public function message() {
+    return "My car is a " . $this->color . " " . $this->model . "!";
+  }
+}
+
+$myCar = new Car("red", "Volvo");
+var_dump($myCar);
+
+//Null Values
+echo "<br>";
+$x = "Hello world!";
+$x = null;
+var_dump($x);
+
+//Casting
+echo "<br>";
+$x = 5;
+$x = (string) $x;
+var_dump($x);
+
 ?>
 </body>
 </html>
