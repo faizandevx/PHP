@@ -159,6 +159,93 @@ echo str_word_count("Hello world!");
 echo "<br>";
 echo strpos("Hello world!", "world");
 
+//String to uppercase
+echo "<br>";
+$x = "Hello World!";
+echo strtoupper($x);
+
+//String to Lowercase
+$x = "Hello World!";
+echo strtolower($x);
+
+//String Replace
+echo "<br>";
+$x = "Hello World!";
+echo str_replace("World", "Dolly", $x);
+
+//Reverse a String
+echo "<br>";
+$x = "Hello World!";
+echo strrev($x);
+
+//Remove Whitespace
+echo "<br>";
+$x = " Hello World! ";
+echo trim($x);
+?> 
+
+<p>The whitespaces are invisible in plain HTML,<br>
+but check out the difference in two input fields:</p>
+
+<?php
+echo "<input value='" . $x . "'>";
+echo "<br>";
+echo "<input value='" . trim($x) . "'>";
+
+//Convert String into Array
+echo "<br>";
+$x = "Hello World!";
+$y = explode(" ", $x);
+//Use the print_r() function to display the result:
+print_r($y);
+/*
+Result:
+Array ( [0] => Hello [1] => World! )
+*/
+
+//PHP - Concatenate Strings
+echo "<br>";
+//String Concatenation
+
+$x = "Hello";
+$y = "World";
+$z = $x . $y;
+echo $z;
+
+$x = "Hello";
+$y = "World";
+$z = $x . " " . $y;
+echo $z;
+
+$x = "Hello";
+$y = "World";
+$z = "$x $y";
+echo $z;
+
+//PHP - Slicing Strings
+echo "<br>";
+//Slice a String
+$x = "Hello World!";
+echo substr($x, 6, 5);
+
+//Slice String to the End
+$x = "Hello World!";
+echo substr($x, 6);
+
+//Slice String From the End
+$x = "Hello World!";
+echo substr($x, -5, 3);
+
+//Negative Length
+$x = "Hi, how are you?";
+echo substr($x, 5, -3);
+
+//PHP - Escape Characters
+echo "<br>";
+//Escape Character
+$x = "We are the so-called \"Vikings\" from the north.";
+echo $x;
+
 ?>
 </body>
 </html>
