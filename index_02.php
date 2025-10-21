@@ -246,6 +246,254 @@ echo "<br>";
 $x = "We are the so-called \"Vikings\" from the north.";
 echo $x;
 
+
+//PHP Numbers New Tpoic for Numbers
+echo "<br>";
+$a = 5;
+$b = 5.34;
+$c = "25";
+
+var_dump($a);
+echo "<br>";
+var_dump($b);
+echo "<br>";
+var_dump($c);
+
+//PHP Integers
+echo "<br>";
+// Check if the type of a variable is integer   
+$x = 5985;
+var_dump(is_int($x));
+
+echo "<br>";
+
+// Check again... 
+$x = 59.85;
+var_dump(is_int($x));
+
+//PHP Floats
+echo "<br>";
+$x = 10.365;
+var_dump(is_float($x));
+
+//PHP Infinity
+echo "<br>";
+// Check if a numeric value is infinite 
+$x = 1.9e411;
+var_dump(is_infinite($x));
+
+//PHP NaN Not a Number    //NaN is used for impossible mathematical operations.
+echo "<br>";
+// Invalid calculation will return a NaN value
+$x = acos(8);
+var_dump($x);
+
+//PHP Numerical Strings
+echo "<br>";
+// Check if the variable is numeric   
+$x = 5985;
+var_dump(is_numeric($x));
+
+echo "<br>";
+
+$x = "5985";
+var_dump(is_numeric($x));
+
+echo "<br>";
+
+$x = "59.85" + 100;
+var_dump(is_numeric($x));
+
+echo "<br>";
+
+$x = "Hello";
+var_dump(is_numeric($x));
+
+//PHP Casting Strings and Floats to Integers
+echo "<br>";
+// Cast float to int 
+$x = 23465.768;
+$int_cast = (int)$x;
+echo $int_cast;
+  
+echo "<br>";
+
+// Cast string to int
+$x = "23465.768";
+$int_cast = (int)$x;
+echo $int_cast;
+
+//PHP Casting
+echo "<br>";
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (string) $a;
+$b = (string) $b;
+$c = (string) $c;
+$d = (string) $d;
+$e = (string) $e;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+//Cast to Integer
+echo "<br>";
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "25 kilometers"; // String
+$d = "kilometers 25"; // String
+$e = "hello"; // String
+$f = true;    // Boolean
+$g = NULL;    // NULL
+
+$a = (int) $a;
+$b = (int) $b;
+$c = (int) $c;
+$d = (int) $d;
+$e = (int) $e;
+$f = (int) $f;
+$g = (int) $g;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+var_dump($f);
+var_dump($g);
+
+//Cast to float
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "25 kilometers"; // String
+$d = "kilometers 25"; // String
+$e = "hello"; // String
+$f = true;    // Boolean
+$g = NULL;    // NULL
+
+$a = (float) $a;
+$b = (float) $b;
+$c = (float) $c;
+$d = (float) $d;
+$e = (float) $e;
+$f = (float) $f;
+$g = (float) $g;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+var_dump($f);
+var_dump($g);
+
+//Cast to Boolean
+echo "<br>";
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = 0;       // Integer
+$d = -1;      // Integer
+$e = 0.1;     // Float
+$f = "hello"; // String
+$g = "";      // String
+$h = true;    // Boolean
+$i = NULL;    // NULL
+
+$a = (bool) $a;
+$b = (bool) $b;
+$c = (bool) $c;
+$d = (bool) $d;
+$e = (bool) $e;
+$f = (bool) $f;
+$g = (bool) $g;
+$h = (bool) $h;
+$i = (bool) $i;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+var_dump($f);
+var_dump($g);
+var_dump($h);
+var_dump($i);
+
+//Cast to Array
+echo"<br>";
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (array) $a;
+$b = (array) $b;
+$c = (array) $c;
+$d = (array) $d;
+$e = (array) $e;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+//Cast to Object
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (object) $a;
+$b = (object) $b;
+$c = (object) $c;
+$d = (object) $d;
+$e = (object) $e;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+//Cast  to NULL
+echo"<br>";
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+// $a = (unset) $a;
+// $b = (unset) $b;
+// $c = (unset) $c;
+// $d = (unset) $d;
+// $e = (unset) $e;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+
 ?>
 </body>
 </html>
