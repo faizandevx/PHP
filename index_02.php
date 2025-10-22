@@ -528,6 +528,109 @@ define("cars", [
 ]);
 echo cars[1];
 
+//PHP Magic Constants
+echo "<br>";
+echo __DIR__;
+echo __FILE__;
+function myValue(){
+  return __FUNCTION__;
+}
+echo myValue();
+echo __LINE__;
+
+class Fruits {
+  public function myValue(){
+    return __METHOD__;
+  }
+}
+$kiwi = new Fruits();
+echo $kiwi->myValue();
+
+trait message1 {
+  public function msg1() {
+    echo __TRAIT__; 
+  }
+}
+
+class Welcome {
+  use message1;
+}
+
+$obj = new Welcome();
+$obj->msg1();
+
+//PHP Operators
+//Operators are used to perform operations on variables and values.
+$x = 100;  
+$y = 50;
+
+if ($x == 100 and $y == 50) {
+    echo "Hello world!";
+}
+
+//PHP if Statement
+echo "<br>";
+//If statement executes the code if one condition is true
+if (5 > 3) {
+  echo "Please execute the code!";
+}
+
+$t = 14;
+
+if ($t < 20) {
+  echo "Please execute the code!";
+}
+
+//PHP if Operators
+echo "<br>";
+//PHP Comparison Operators
+$t = 14;
+
+if ($t == 14) {
+  echo "Have a good day!";
+}
+
+//The === If Operators
+$x = 100;  
+$y = 100;
+
+if ($x === $y) {
+  echo "$x is identical to $y";
+}
+
+//The <> Operators (Not equal)
+$x = 100;  
+$y = 50;
+
+if ($x <> $y) {
+  echo "$x is not equal to $y";
+} 
+
+//The !== Operators (Not Identical)
+$x = 100;  
+$y = 50;
+
+if ($x !== $y) {
+  echo "$x is not identical to $y";
+}
+
+//PHP Logical Operators
+$a = 200;
+$b = 33;
+$c = 500;
+
+if ($a > $b && $a < $c ) {
+  echo "Both conditions are true";
+}
+
+//Comparing many conditions using only If statement
+$a = 5;
+
+if ($a == 2 || $a == 3 || $a == 4 || $a == 5 || $a == 6 || $a == 7) {
+  echo "$a is a number between 2 and 7";
+}
+
+
 ?>
 </body>
 </html>
