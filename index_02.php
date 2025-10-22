@@ -494,6 +494,40 @@ var_dump($d);
 var_dump($e);
 
 
+//PHP Math Functions
+//PHP has a set of math functions that allows you to perform mathematical tasks on numbers.
+echo "<br>";
+//PHP pi() Function
+echo(pi());
+$radius = 5;
+$area = pi() * pow($radius, 2);
+echo "Area: " . $area;
+
+//PHP min() and max() Functions
+echo(min(0, 150, 30, 20, -8, -200) . "<br>");
+echo(max(0, 150, 30, 20, -8, -200));
+
+//PHP abs() Function
+$a = 8;
+$b = 15;
+echo "Difference: " . abs($a - $b);
+
+//PHP Constants
+echo "<br>";
+// case-sensitive constant name
+define("GREETING", "Welcome to W3Schools.com!");
+echo GREETING;
+
+const MYCAR = "Volvo";
+echo MYCAR;
+//PHP Constant Arrays
+define("cars", [
+  "Alfa Romeo",
+  "BMW",
+  "Toyota"
+]);
+echo cars[1];
+
 ?>
 </body>
 </html>
