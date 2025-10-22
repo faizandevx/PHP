@@ -630,6 +630,121 @@ if ($a == 2 || $a == 3 || $a == 4 || $a == 5 || $a == 6 || $a == 7) {
   echo "$a is a number between 2 and 7";
 }
 
+//PHP if...else Statements
+echo "<br>";
+$t = date("H");
+
+if ($t < 20) {
+  echo "Have a good day!";
+} else {
+  echo "Have a good night!";
+}
+
+//PHP - The if...elseif...else Statement
+$t = date("H");
+echo "<p>The hour (of the server) is " . $t; 
+echo ", and will give the following message:</p>";
+
+if ($t < "10") {
+  echo "Have a good morning!";
+} elseif ($t < "20") {
+  echo "Have a good day!";
+} else {
+  echo "Have a good night!";
+}
+
+//PHP Shorthand if Statements
+echo "<br>";
+$a = 5;
+
+if ($a < 10) $b = "Hello";
+
+echo $b;
+
+$a = 13;
+$b = $a < 10 ? "Hello" : "Good Bye";
+
+echo $b;
+
+$a = 13;
+
+///PHP Nested if Statement
+echo "<br>";
+if ($a > 10) {
+  echo "Above 10";
+  if ($a > 20) {
+    echo " and also above 20";
+  } else {
+    echo " but not above 20";
+  }
+}
+
+//The PHP switch Statement
+echo "<br>";
+$favcolor = "red";
+
+switch ($favcolor) {
+  case "red":
+    echo "Your favorite color is red!";
+    break;
+  case "blue":
+    echo "Your favorite color is blue!";
+    break;
+  case "green":
+    echo "Your favorite color is green!";
+    break;
+  default:
+    echo "Your favorite color is neither red, blue, nor green!";
+}
+
+//The PHP Break Keywords
+$favcolor = "red";
+
+switch ($favcolor) {
+  case "red":
+    echo "Your favorite color is red!";
+  case "blue":
+    echo "Your favorite color is blue!";
+    break;
+  case "green":
+    echo "Your favorite color is green!";
+    break;
+  default:
+    echo "Your favorite color is neither red, blue, nor green!";
+}
+
+//The default keywords
+$d = 4;
+
+switch ($d) {
+  case 6:
+    echo "Today is Saturday";
+    break;
+  case 0:
+    echo "Today is Sunday";
+    break;
+  default:
+    echo "Looking forward to the Weekend";
+}
+
+//Common Code Block
+$d = 3;
+
+switch ($d) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:  
+    echo "The weeks feels so long!";
+    break;
+  case 6:
+  case 0:
+    echo "Weekends are the best!";
+    break;
+  default:
+    echo "Something went wrong";
+}
 
 ?>
 </body>
