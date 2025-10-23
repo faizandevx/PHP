@@ -787,6 +787,54 @@ while ($i < 100) {
   echo "$i<br>";
 }
 
+//PHP do while Loop
+echo "<br>";
+//The PHP do...while Loop
+$i = 1;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+$i = 8;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+//The PHP continue Statement
+$i = 0;
+
+do {
+  $i++;
+  if ($i == 3) continue;
+  echo $i;
+} while ($i < 6);
+
+//PHP for Loop
+echo "<br>";
+//The PHP for Loop
+for ($x = 0; $x <= 10; $x++) {
+  echo "The number is: $x <br>";
+}
+
+//The PHP break Statement
+for ($x = 0; $x <= 10; $x++) {
+  if ($x == 3) break;
+  echo "The number is: $x <br>";
+}
+
+//The PHP continue Statement
+for ($x = 0; $x <= 10; $x++) {
+  if ($x == 3) continue;
+  echo "The number is: $x <br>";
+}
+
+for ($x = 0; $x <= 100; $x+=10) {
+  echo "The number is: $x <br>";
+}
 
 ?>
 </body>
