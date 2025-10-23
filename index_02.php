@@ -836,6 +836,81 @@ for ($x = 0; $x <= 100; $x+=10) {
   echo "The number is: $x <br>";
 }
 
+//PHP foreach Loop
+echo "<br>";
+//The PHP foreach Loop on Arrays
+$colors = array("red", "green", "blue", "yellow"); 
+
+foreach ($colors as $x) {
+  echo "$x <br>";
+}
+
+//Print both the key and the value from the $members array:
+$members = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+foreach ($members as $x => $y) {
+  echo "$x : $y <br>";
+}
+
+// class Car {
+//   public $color;
+//   public $model;
+//   public function __construct($color, $model) {
+//     $this->color = $color;
+//     $this->model = $model;
+//   }
+// }
+
+//The PHP foreach Loop on Objects
+$myCar = new Car("red", "Volvo");
+
+foreach ($myCar as $x => $y) {
+  echo "$x: $y<br>";
+}
+
+//The PHP break Statement
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") break;
+  echo "$x <br>";
+}
+
+//The PHP Continue Statement 
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") continue;
+  echo "$x <br>";
+}
+
+///PHP Foreach Loop Byref
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") $x = "pink";
+}
+
+var_dump($colors);
+
+//By assigning the array items by reference, changes will affect the original array:
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as &$x) {
+  if ($x == "blue") $x = "pink";
+}
+
+var_dump($colors);
+
+//endforeach Loop
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) :
+  echo "$x <br>";
+endforeach;
+
+
+
 ?>
 </body>
 </html>
