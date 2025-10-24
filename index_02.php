@@ -1021,24 +1021,24 @@ familyName("Farhan", "1978");
 familyName("Waqas", "1983");
 
 //PHP Default Argument Value
-function setHeight($minheight = 50) {
-  echo "The height is : $minheight <br>";
-}
+// function setHeight($minheight = 50) {
+//   echo "The height is : $minheight <br>";
+// }
 
-setHeight(350);
-setHeight(); // will use the default value of 50
-setHeight(135);
-setHeight(80);
+// setHeight(350);
+// setHeight(); // will use the default value of 50
+// setHeight(135);
+// setHeight(80);
 
-function sum($x, $y) {
-  $z = $x + $y;
-  return $z;
-}
+// function sum($x, $y) {
+//   $z = $x + $y;
+//   return $z;
+// }
 
 //PHP Functions - Returning values
-echo "5 + 10 = " . sum(5,10) . "<br>";
-echo "7 + 13 = " . sum(7,13) . "<br>";
-echo "2 + 4 = " . sum(2,4);
+// echo "5 + 10 = " . sum(5,10) . "<br>";
+// echo "7 + 13 = " . sum(7,13) . "<br>";
+// echo "2 + 4 = " . sum(2,4);
 
 //Passing Arguments by Refrence
 function add_five(&$value) {
@@ -1083,17 +1083,65 @@ var_dump($cars);
 
 //Array Items
 // function example:
-function myFunction() {
-  echo "This text comes from a function";
-}
+// function myFunction() {
+//   echo "This text comes from a function";
+// }
 // create array:
-$myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
+// $myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
 
 // calling the function from the array item:
-$myArr[3]();
+// $myArr[3]();
 
 $cars = array("Volvo", "BMW", "Toyota");
 echo count($cars);
+
+//PHP Global Variables - Superglobals
+echo "<br>";
+///Superglobals were introduced in PHP 4.1.0, and are built-in variables that are always available in all scopes.
+// $x = 10;
+// $y = 20;
+
+// function sum() {
+//   global $x, $y;
+//   $z = $x + $y;
+//   echo $z;
+// }
+
+// sum();
+
+//GLOBAL VARIABLES
+// $x = 75;
+  
+// function myfunction() {
+//   echo $GLOBALS['x'];
+// }
+
+// myfunction();
+
+//GLOBAL Inside a Function
+// $x = 75;
+  
+// function myfunction() {
+//   global $x;
+//   echo $x;
+// }
+
+// myfunction();
+
+// $x = 100;
+
+// echo $GLOBALS["x"];
+// echo $x;
+
+function myfunction() {
+  $GLOBALS["x"] = 100;
+}
+
+myfunction();
+
+echo $GLOBALS["x"];
+echo $x;
+
 
 ?>
 
