@@ -1,3 +1,10 @@
+<?php declare(strict_types=1); // strict requirement
+function addNumbers(float $a, float $b) : float {
+  return $a + $b;
+}
+echo addNumbers(1.2, 5.2); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1067,6 +1074,28 @@ function myFamily($lastname, ...$firstname) {
 $a = myFamily("Doe", "Jane", "John", "Joey");
 echo $a;
 
+//Arrays in PHP
+echo "<br>";
+//An array stores multiple values in one single variable:
+$cars = array("Volvo", "BMW", "Toyota"); 
+
+var_dump($cars);
+
+//Array Items
+// function example:
+function myFunction() {
+  echo "This text comes from a function";
+}
+// create array:
+$myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
+
+// calling the function from the array item:
+$myArr[3]();
+
+$cars = array("Volvo", "BMW", "Toyota");
+echo count($cars);
+
 ?>
+
 </body>
 </html>
