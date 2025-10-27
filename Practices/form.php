@@ -58,5 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<!-- PHP Superglobal - $_GET -->
+ 
+
 </body>
 </html>
