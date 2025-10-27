@@ -6,6 +6,14 @@
     <title>Practicing PHP</title>
 </head>
 <body>
+
+<!-- PHP Form Handling -->
+<form action="welcome_get.php" method="get">
+Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit">
+</form>
+
     <?php
 
     // PHP Regular Expressions
@@ -23,6 +31,11 @@ echo preg_match_all($pattern, $str);
 $str = "Visit Microsoft!";
 $pattern = "/microsoft/i";
 echo preg_replace($pattern, "W3Schools", $str);
+
+//Grouping
+$str = "Apples and bananas.";
+$pattern = "/ba(na){2}/i";
+echo preg_match($pattern, $str);
 
 
 ?>
