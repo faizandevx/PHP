@@ -127,6 +127,37 @@ $str = "<h1>Hello WorldÆØÅ!</h1>";
 $newstr = filter_var($str, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 echo $newstr;
 
+//PHP Callback Functions
+echo "<br>";
+function my_callback($item) {
+  return strlen($item);
+}
+
+$strings = ["apple", "orange", "banana", "coconut"];
+$lengths = array_map("my_callback", $strings);
+print_r($lengths);
+
+$strings = ["apple", "orange", "banana", "coconut"];
+$lengths = array_map( function($item) { return strlen($item); } , $strings);
+print_r($lengths);
+
+function exclaim($str) {
+  return $str . "! ";
+}
+
+function ask($str) {
+  return $str . "? ";
+}
+
+function printFormatted($str, $format) {
+  // Calling the $format callback function
+  echo $format($str);
+}
+
+// Pass "exclaim" and "ask" as callback functions to printFormatted()
+printFormatted("Hello world", "exclaim");
+printFormatted("Hello world", "ask");
+
 ?>
 
 </body>
