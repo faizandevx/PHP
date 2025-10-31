@@ -146,6 +146,9 @@ if ($uploadOk == 0) {
 }
 
 //PHP Filters
+// Validating data = Determine if the data is in proper form.
+// Sanitizing data = Remove any illegal character from the data.
+
 
 ?>
 
