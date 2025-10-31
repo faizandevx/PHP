@@ -158,6 +158,51 @@ function printFormatted($str, $format) {
 printFormatted("Hello world", "exclaim");
 printFormatted("Hello world", "ask");
 
+//PHP and JSON
+echo "<br>";
+$age = array("Peter"=>35, "Ben"=>37, "Joe"=>43);
+
+echo json_encode($age);
+
+$cars = array("Volvo", "BMW", "Toyota");
+
+echo json_encode($cars);
+
+//PHP - json_decode()
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+ 
+var_dump(json_decode($jsonobj));
+
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+ 
+var_dump(json_decode($jsonobj, true));
+
+//PHP - Accessing the Decoded Values
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+
+$obj = json_decode($jsonobj);
+
+echo $obj->Peter;
+echo $obj->Ben;
+echo $obj->Joe;
+
+//PHP - Looping Through the Values
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+
+$obj = json_decode($jsonobj);
+
+foreach($obj as $key => $value) {
+  echo $key . " => " . $value . "<br>";
+}
+
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+
+$arr = json_decode($jsonobj, true);
+
+foreach($arr as $key => $value) {
+  echo $key . " => " . $value . "<br>";
+}
+
 ?>
 
 </body>
