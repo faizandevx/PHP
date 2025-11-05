@@ -181,26 +181,55 @@ $apple = new Fruit("Apple", "red");
 //PHP OOP - Access Modifiers
 echo "<br>";
 //PHP - Access Modifiers
+// class Fruit {
+//   public $name;
+//   public $color;
+//   public $weight;
+
+//   function set_name($n) { 
+//     $this->name = $n;
+//   }
+//   protected function set_color($n) { 
+//     $this->color = $n;
+//   }
+//   private function set_weight($n) {
+//     $this->weight = $n;
+//   }
+// }
+
+//PHP OOP-Inheritance
+echo "<br>";
+//
+// $mango = new Fruit();
+// $mango->set_name('Mango'); 
+// $mango->set_color('Yellow'); 
+// $mango->set_weight('300'); 
+
+//PHP OOP-Inheritance
+echo "<br>";
+//OOP Inheritance
 class Fruit {
   public $name;
   public $color;
-  public $weight;
-
-  function set_name($n) {  // a public function (default)
-    $this->name = $n;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color; 
   }
-  protected function set_color($n) { // a protected function
-    $this->color = $n;
-  }
-  private function set_weight($n) { // a private function
-    $this->weight = $n;
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}."; 
   }
 }
 
-$mango = new Fruit();
-$mango->set_name('Mango'); // OK
-$mango->set_color('Yellow'); // ERROR
-$mango->set_weight('300'); // ERROR
+// Strawberry is inherited from Fruit
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? "; 
+  }
+}
+
+$strawberry = new Strawberry("Strawberry", "red");
+$strawberry->message();
+$strawberry->intro();
 
 ?>
 </body>
