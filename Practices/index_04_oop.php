@@ -119,26 +119,64 @@ echo "<br>";
 // echo $apple->get_name();
 
 //Another Example of __Constructor() Function
-class Fruit {
-  public $name;
-  public $color;
+// class Fruit {
+//   public $name;
+//   public $color;
 
+//   function __construct($name, $color) {
+//     $this->name = $name; 
+//     $this->color = $color; 
+//   }
+//   function get_name() {
+//     return $this->name;
+//   }
+//   function get_color() {
+//     return $this->color;
+//   }
+// }
+
+// $apple = new Fruit("Apple", "red");
+// echo $apple->get_name();
+// echo "<br>";
+// echo $apple->get_color();
+
+//PHP OOP - Destructor
+echo "<br>";
+// PHP - The __destruct() Function
+// class Fruit {
+//   public $name;
+//   public $color;
+
+//   function __construct($name) {
+//     $this->name = $name; 
+//   }
+//   function __destruct() {
+//     echo "The fruit is {$this->name}."; 
+//   }
+// }
+
+// $apple = new Fruit("Apple");
+
+
+//PHP OPP Destructor
+echo "<br>";
+//PHP-The __Destructor Function
+class Fruit {
+  // Properties
+  var $name;
+  var $color;
+
+  // Methods
   function __construct($name, $color) {
-    $this->name = $name; 
+    $this->name = $name;
     $this->color = $color; 
   }
-  function get_name() {
-    return $this->name;
-  }
-  function get_color() {
-    return $this->color;
+  function __destruct() {
+    echo "The fruit is {$this->name} and the color is {$this->color}."; 
   }
 }
 
 $apple = new Fruit("Apple", "red");
-echo $apple->get_name();
-echo "<br>";
-echo $apple->get_color();
 ?>
 </body>
 </html>
