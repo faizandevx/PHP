@@ -82,24 +82,63 @@ echo "<br>";
 
 // echo $apple->name;
 
-echo "<br>";
-class Fruit {
+// echo "<br>";
+// class Fruit {
   // Properties
+//   public $name;
+//   public $color;
+
+  // Methods
+//   function set_name($name) {
+//     $this->name = $name;
+//   }
+//   function get_name() {
+//     return $this->name;
+//   }
+// }
+
+// $apple = new Fruit();
+// var_dump($apple instanceof Fruit);
+
+//PHP OOP - Constructor
+echo "<br>";
+//PHP-The __Construct() Function
+// class Fruit {
+//   public $name;
+//   public $color;
+
+//   function __construct($name) {
+//     $this->name = $name; 
+//   }
+//   function get_name() {
+//     return $this->name;
+//   }
+// }
+
+// $apple = new Fruit("Apple");
+// echo $apple->get_name();
+
+//Another Example of __Constructor() Function
+class Fruit {
   public $name;
   public $color;
 
-  // Methods
-  function set_name($name) {
-    $this->name = $name;
+  function __construct($name, $color) {
+    $this->name = $name; 
+    $this->color = $color; 
   }
   function get_name() {
     return $this->name;
   }
+  function get_color() {
+    return $this->color;
+  }
 }
 
-$apple = new Fruit();
-var_dump($apple instanceof Fruit);
-
+$apple = new Fruit("Apple", "red");
+echo $apple->get_name();
+echo "<br>";
+echo $apple->get_color();
 ?>
 </body>
 </html>
