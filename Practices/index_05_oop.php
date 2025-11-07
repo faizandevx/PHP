@@ -1,3 +1,29 @@
+<?php
+namespace Html;
+class Table {
+  public $title = "";
+  public $numRows = 0;
+  public function message() {
+    echo "<p>Table '{$this->title}' has {$this->numRows} rows.</p>";
+  }
+}
+$table = new Table();
+$table->title = "My table";
+$table->numRows = 5;
+?>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$table->message();
+?>
+
+</body>
+</html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -273,6 +299,17 @@ class domainW3 extends domain {
 
 $domainW3 = new domainW3;
 echo $domainW3 -> websiteName;
+
+//PHP OOP - Static Properties
+echo "<br>";
+class pi {
+  public static $value = 3.14159;
+}
+
+// Get static property
+echo pi::$value;
+
+//PHP Namespaces
 
 ?>
 
